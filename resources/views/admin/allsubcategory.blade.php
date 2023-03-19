@@ -7,6 +7,7 @@ All Sub Category - Single Ecom
     <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Pages/</span>All Sub Category</h4>
 
     <div class="card">
+        <!-- From -->
         <h5 class="card-header">Sub Category List</h5>
         <div class="table-responsive text-nowrap">
             <table class="table">
