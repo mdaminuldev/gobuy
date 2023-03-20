@@ -8,6 +8,14 @@ All Category - Single Ecom
 
     <div class="card">
         <h5 class="card-header">Category List</h5>
+        <!-- Success massage-->
+        @if (session()->has('massage'))
+            <div class="alert alert-success alert-dismissible" role="alert">
+                {{ session()->get('massage') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+         <!-- Success massage-->
         <div class="table-responsive text-nowrap">
             <table class="table">
                 <thead class="table-light">
