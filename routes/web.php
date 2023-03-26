@@ -54,12 +54,16 @@ Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::get('/admin/edit-subcategory/{id}', 'EditSubCategory')->name('editsubcategory');
         Route::post('/admin/update-subcat', 'UpdateSubCat')->name('updatesubcat');
         Route::get('/admin/delete-subcat/{id}', 'DeleteSubCat')->name('deletesubcat');
+
     });
 
     Route::controller(ProductController::class)->group(function () {
         Route::get('/admin/all-product', 'index')->name('allproduct');
         Route::get('/admin/add-product', 'AddProduct')->name('addproduct');
         Route::post('admin/storeproduct', 'StoreProduct')->name('storeproduct');
+        Route::get('/admin/edit-product/{id}', 'EditProduct')->name('editproduct');
+        Route::post('/admin/updateproduct', 'UpdateProduct')->name('updateproduct');
+        Route::get('admin/delete-product/{id}', 'DeleteProduct')->name('deleteproduct');
     });
 
     Route::controller(OrderController::class)->group(function () {

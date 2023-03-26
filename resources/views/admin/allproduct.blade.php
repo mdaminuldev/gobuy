@@ -31,18 +31,17 @@
                             <tr>
                                 <td>{{ $product->id }}</td>
                                 <td>{{ $product->product_name }}</td>
-                                <td><img src="{{ asset($product->product_img) }}" style="height: 80px;" alt=""></td>
+                                <td>
+                                    <img src="{{ asset($product->product_img) }}" style="height: 80px;" alt="">
+                                </td>
                                 <td>{{ $product->price }}</td>
                                 <td>{{ $product->quantity }}</td>
-
-
                                 <td>
-                                    <a href="#" class="btn btn-primary">Edit</a>
-                                    <a href="#" class="btn btn-danger">Delete</a>
+                                    <a href="{{ route('editproduct', $product->id) }}" class="btn btn-primary">Edit</a>
+                                    <a href="{{ route('deleteproduct', $product->id) }}" class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>
                         @endforeach
-
                     </tbody>
                 </table>
             </div>
